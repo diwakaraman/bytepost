@@ -10,16 +10,17 @@ const links=[
   },
   {
     name:"AllBlogs",  
-    to:"/",
+    to:"/all-blogs",
   },
   {
     name:"Profile",  
-    to:"/",
+    to:"/Profile",
   },
   {
     name:"Login",  
-    to:"/",
+    to:"/Login",
   },
+  
   
   
 ];

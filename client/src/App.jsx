@@ -1,11 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/page.jsx';
-import MainLayout from './layout/mainlayout.jsx';
-import Login from './pages/Login/page.jsx';
-import Signup from './pages/Signup/page.jsx';
-import OtherLayout from './layout/OtherLayout.jsx';
-import Profile from './pages/Profile/page.jsx';
+import Home from './pages/Home/page';
+import MainLayout from './layout/mainlayout';
+import OtherLayout from './layout/OtherLayout';
+import Login from './pages/Login/page';
+import Signup from './pages/Signup/page';
+import Profile from './pages/Profile/page';
+import AllBlogs from './pages/All Blogs/page.jsx';
 const App = () => {
   return (
     <Router>
@@ -13,14 +14,15 @@ const App = () => {
         <Route path='/' element={<MainLayout/>}>
           <Route index element={<Home/>}/>
 
-          <Route path='profile' element={<Profile/>}/>
+          <Route path='/all-blogs' element={<AllBlogs/>}/>
+          <Route path='/profile' element={<Profile/>}/>
           </Route>
 
           <Route  element={<OtherLayout/>}>
           
           <Route path='/login' element={<Login/>}/>
         
-          <Route path='/signup' element={<Signup/>}/>
+          <Route path='/Signup' element={<Signup/>}/>
           </Route>
         
       </Routes>

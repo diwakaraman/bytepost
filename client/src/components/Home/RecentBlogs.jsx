@@ -33,7 +33,7 @@ data.map((items,i) => (
         
        </div>
       </div>
-  )
-}
+  );
+};
 
-export default RecentBlogs
+export default RecentBlogs;
