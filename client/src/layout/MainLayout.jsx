@@ -7,7 +7,7 @@ import Home from '../pages/Home/page';
 const MainLayout = () => {
   return (
 
-    <div className=' px-12 md:px-32 lg:px-64'>
+    <div className=' px-12 md:px-32 lg:px-64 bg-yellow-500'>
       <Navbar/>
     <main className='my-4'>
       <Outlet/>
