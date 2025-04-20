@@ -1,5 +1,5 @@
 import React from 'react';
-import SideBar from '../../components/Profile/SideBar';
+import Sidebar from '../../components/Admin Components/Sidebar/Sidebar';
 import { Outlet } from 'react-router-dom';
 
 const AdminDashboard = () => {
@@ -7,7 +7,7 @@ const AdminDashboard = () => {
     <div className='flex'>
       <div  className='w-1/6 h-screen border-r'>
         {" "}
-        <SideBar/>
+        <Sidebar/>
         </div>
       <div className='w-5/6 bg-zinc-200'>
       <Outlet/>
