@@ -17,6 +17,7 @@ import AdminDashboard from './pages/AdminDashboard/page.jsx';
 import DashBoard from './components/Admin Components/Dashboard/DashBoard.jsx';
 import AddBlogs from './components/Admin Components/Add Blogs/AddBlogs.jsx';
 import EditBlogs from './components/Admin Components/Edit Blogs/EditBlogs.jsx';
+import UpdateBlog from './components/Admin Components/Edit Blogs/Compo/UpdateBlog.jsx';
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
           <Route index element={<DashBoard />} />
           <Route path='/admin-dashboard/add-blogs' element={<AddBlogs />} />
           <Route path='/admin-dashboard/edit-blogs' element={<EditBlogs />} />
+          <Route path='/admin-dashboard/update-blog/:id' element={<UpdateBlog/>} />
           </Route>
           
         </Route>

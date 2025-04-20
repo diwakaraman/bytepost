@@ -16,6 +16,7 @@ const Sidebar = () => {
         <Link to={items.to} key={i} className='text-xl hover:scale-105 transition-all duration-300'>{items.name}</Link>
       ))}
      </div>
+     <div><button className='mt-5 bg-black text-white px-4 py-2 w-[100%]  hover:bg-zinc-700 rounded'>LogOut</button></div>
     </div>
   )
 }
