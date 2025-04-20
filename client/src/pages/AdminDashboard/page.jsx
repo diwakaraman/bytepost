@@ -5,7 +5,8 @@ import { Outlet } from 'react-router-dom';
 const AdminDashboard = () => {
   return (
     <div className='flex'>
-      <div  className='w-1/6 h-screen border-r'>
+      <div className='w-1/6'></div>
+      <div  className='w-1/6 fixed h-screen border-r'>
         {" "}
         <Sidebar/>
         </div>
