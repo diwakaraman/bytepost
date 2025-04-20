@@ -10,6 +10,10 @@ import AllBlogs from './pages/All Blogs/page.jsx';
 import DashboardProfile from './components/Profile/DashboardProfile.jsx';
 import Favorites from './components/Profile/Favorites.jsx';
 import LikedBlogs from './components/Profile/LikedBlogs.jsx';
+import Description from './pages/Description/Description.jsx';
+import Categories from './pages/Categories/Categories.jsx';
+import AdminLogin from './pages/Admin Login/adminlogin.jsx';
+import AdminDashboard from './pages/AdminDashboard/page.jsx';
 const App = () => {
   return (
     <Router>
@@ -18,6 +22,8 @@ const App = () => {
           <Route index element={<Home/>}/>
 
           <Route path='/all-blogs' element={<AllBlogs/>}/>
+          <Route path='/description/:id' element={<Description/>}/>
+          <Route path='/cat/:id' element={<Categories/>}/>
           <Route path='/profile' element={<Profile/>}>
           
           <Route index element={<DashboardProfile/>}/>
@@ -30,6 +36,8 @@ const App = () => {
           <Route element={<OtherLayout/>}>
           <Route path='/login' element={<Login/>}/>
           <Route path='/Signup' element={<Signup/>}/>
+          <Route path='/admin-login' element={<AdminLogin/>}/>
+          <Route path='/admin-dashboard' element={<AdminDashboard/>}></Route>
           </Route>
       </Routes>
     </Router>
