@@ -45,7 +45,6 @@ const App = () => {
           <Route path='/admin-dashboard/edit-blogs' element={<EditBlogs />} />
           <Route path='/admin-dashboard/update-blog/:id' element={<UpdateBlog/>} />
           </Route>
-          
         </Route>
       </Routes>
     </Router>
