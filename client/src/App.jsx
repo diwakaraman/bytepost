@@ -21,7 +21,7 @@ import UpdateBlog from './components/Admin Components/Edit Blogs/Compo/UpdateBlo
 
 const App = () => {
   return (
-    <Router>
+    <>
       <Routes>
         <Route path='/' element={<MainLayout/>}>
           <Route index element={<Home />} />
@@ -47,7 +47,7 @@ const App = () => {
           </Route>
         </Route>
       </Routes>
-    </Router>
+    </>
   );
 };
 
