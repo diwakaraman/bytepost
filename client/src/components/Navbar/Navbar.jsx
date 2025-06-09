@@ -6,64 +6,73 @@ import { RxCross2 } from "react-icons/rx";
 const Navbar = () => {
   const links = [
     { name: "Home", to: "/" },
-    { name: "AllBlogs", to: "/all-blogs" },
+    { name: "All Blogs", to: "/all-blogs" },
     { name: "Profile", to: "/Profile" },
     { name: "Login", to: "/Login" },
   ];
-  const [MobileNav, setMobileNav] = React.useState(false);
+
+  const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
 
   return (
-    <nav className='relative flex items-center justify-between py-4 border-b border-zinc-300 px-6'>
-      
-      {/* Left Side - Logo */}
-      <Link to="/" className="text-xl font-bold mr-auto">
-        BytePost
-      </Link>
-
-      {/* Right Side - Links */}
-      <div className='hidden lg:flex items-center gap-6'>
-        {links.map((item, i) => (
-          <Link key={i} to={item.to} className="hover:text-blue-600 transition-all duration-300">
-            {item.name}
-          </Link>
-        ))}
-        <Link
-          to="/signup"
-          className="bg-black px-4 py-2 text-zinc-100 hover:bg-blue-600 transition-all duration-300"
-        >
-          Signup
+    <nav className="relative z-50 w-full bg-white border-b border-gray-200 px-6 py-4 shadow-sm">
+      {/* Navbar Container */}
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        
+        {/* Logo */}
+        <Link to="/" className="text-2xl font-extrabold text-gray-800">
+          BytePost
         </Link>
-      </div>
 
-      {/* Mobile Menu Icon */}
-      <div className='lg:hidden'>
-        <button className='text-3xl' onClick={() => setMobileNav(!MobileNav)}>
-          <IoReorderThree />
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      <div className={`fixed top-0 left-0 nav-bg h-screen w-full backdrop-blur-md p-8 ${MobileNav ? "translate-y-0 flex flex-col" : "translate-y-[-100%]"} transition-all duration-300`}>
-        <div className='w-full flex justify-end'>
-          <button className='text-3xl' onClick={() => setMobileNav(false)}>
-            <RxCross2 />
-          </button>
-        </div>
-        <div className='h-full flex flex-col items-center justify-center'>
-          {links.map((item, i) => (
-            <Link key={i} to={item.to} className="mb-8 text-4xl hover:text-blue-600 transition-all duration-300" onClick={() => setMobileNav(false)}>
-              {item.name}
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center space-x-6">
+          {links.map((link, idx) => (
+            <Link
+              key={idx}
+              to={link.to}
+              className="text-gray-600 hover:text-blue-600 transition duration-200"
+            >
+              {link.name}
             </Link>
           ))}
           <Link
             to="/signup"
-            className="text-4xl bg-black px-8 py-4 text-zinc-100 hover:bg-blue-600 transition-all duration-300"
-            onClick={() => setMobileNav(false)}
+            className="ml-4 bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition"
           >
             Signup
           </Link>
         </div>
+
+        {/* Mobile Toggle Button */}
+        <button
+          onClick={() => setMobileNavOpen(!mobileNavOpen)}
+          className="text-3xl text-gray-700 lg:hidden"
+        >
+          {mobileNavOpen ? <RxCross2 /> : <IoReorderThree />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileNavOpen && (
+        <div className="absolute top-16 left-0 w-full bg-white shadow-lg border-t border-gray-200 px-6 py-8 lg:hidden flex flex-col items-center space-y-6 transition-all duration-300">
+          {links.map((link, idx) => (
+            <Link
+              key={idx}
+              to={link.to}
+              className="text-xl text-gray-700 hover:text-blue-600 transition"
+              onClick={() => setMobileNavOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <Link
+            to="/signup"
+            className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition"
+            onClick={() => setMobileNavOpen(false)}
+          >
+            Signup
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };
