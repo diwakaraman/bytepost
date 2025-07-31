@@ -13,6 +13,7 @@ const Profile = () => {
     w-5/6 max-h-auto min-h-screen'>
       <Outlet/></div>
     </div>
+    //hbyggvtvt
   )
 }
 
