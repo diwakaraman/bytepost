@@ -3,7 +3,7 @@ import React from 'react'
 const Description = () => {
   const AllBlogs = () => {
     const data = [
-      {img: "./temp.jpg",
+      {img: "./nature.jpg",
       title: "Lorem ipsum ",
       description: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."},
   
