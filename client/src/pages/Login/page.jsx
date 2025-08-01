@@ -16,8 +16,8 @@ const Login = () => {
     setError('');
     try {
       const res = await axios.post('http://localhost:1000/api/user/login', formData);
-      localStorage.setItem('token', res.data.token); // optional if using token-based login
-      navigate('/admin-dashboard'); // ✅ Redirect after login
+      localStorage.setItem('token', res.data.token);
+      navigate('/admin-dashboard');
     } catch (err) {
       console.error(err);
       setError(err.response?.data?.message || 'Login failed');
@@ -25,23 +25,25 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-100">
-      <div className="p-8 shadow-2xl rounded-2xl w-full max-w-md bg-white">
-        <div className="text-2xl text-center mb-6">
-          <h1 className="font-bold inline">Welcome Again!</h1>
-          <span className="block text-base mt-1">Please Login Here</span>
+    <div className="h-screen flex items-center justify-center bg-gradient-to-r from-purple-300 via-pink-200 to-yellow-200">
+      <div className="p-10 shadow-2xl rounded-3xl w-full max-w-md bg-white border border-purple-200">
+        <div className="text-3xl text-center mb-6 font-extrabold text-purple-700">
+          <h1>Welcome Again!</h1>
+          <span className="block text-base mt-1 font-medium text-gray-600">Please Login Here</span>
         </div>
 
-        {error && <p className="text-red-600 text-sm text-center mb-2">{error}</p>}
+        {error && (
+          <p className="text-red-600 text-sm text-center mb-4 font-medium">{error}</p>
+        )}
 
-        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+        <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"
             onChange={handleChange}
             required
             placeholder="Email"
-            className="px-3 py-2 border rounded-lg shadow-sm"
+            className="px-4 py-2 border-2 border-purple-300 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-purple-400"
           />
           <input
             type="password"
@@ -49,18 +51,21 @@ const Login = () => {
             onChange={handleChange}
             required
             placeholder="Password"
-            className="px-3 py-2 border rounded-lg shadow-sm"
+            className="px-4 py-2 border-2 border-purple-300 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-purple-400"
           />
           <button
             type="submit"
-            className="mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+            className="mt-2 bg-purple-600 text-white font-semibold py-2 rounded-lg hover:bg-purple-700 transition duration-300 shadow-md"
           >
             Login
           </button>
         </form>
 
-        <p className="mt-4 text-sm text-center">
-          Don't Have An Account? <a href="/signup" className="text-blue-600 hover:underline">Signup</a>
+        <p className="mt-5 text-sm text-center text-gray-700">
+          Don't Have An Account?{' '}
+          <a href="/signup" className="text-purple-600 font-medium hover:underline">
+            Signup
+          </a>
         </p>
       </div>
     </div>
