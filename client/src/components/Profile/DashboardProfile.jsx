@@ -23,8 +23,8 @@ const DashboardProfile = () => {
          </div>
         </div>
         <div>
-          <p className='text-zinc-700'>thecodemaster@gmail.com</p>
-          <h1 className='text-5xl mt-2 font-semibold'>The Code Master</h1>
+          <p className='text-zinc-700'>iamankumardiwakar@gmail.com</p>
+          <h1 className='text-5xl mt-2 font-semibold'>Aman Diwakar</h1>
           </div>
         </div>
         <hr className='my-8'/>

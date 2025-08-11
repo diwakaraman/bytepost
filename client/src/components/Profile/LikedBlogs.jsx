@@ -1,15 +1,15 @@
 import React from 'react'
 import BlogCard from '../Blog Card/BlogCard';
 const data = [
-  {img: "../temp.jpg",
+  {img: "../recent1.jpg",
   title: "Lorem ipsum ",
   description: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."},
 
-  {img: "../temp.jpg",
+  {img: "../recent2.jpg",
     title: "Lorem ipsum .",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."},
 
-    {img: "../temp.jpg",
+    {img: "../recent3.jpg",
       title: "Lorem ipsum .",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus."},
 ];
