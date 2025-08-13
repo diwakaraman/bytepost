@@ -7,7 +7,7 @@ const Header = () => {
       {/* Heading Section */}
       <div className='text-4xl flex flex-col w-full items-start'>
         <h1 className='font-bold'>Your Own Blogging Platform!</h1>
-        <h2 className='text-lg font-light text-gray-600'>Discover new blogs on technology, trends, and innovation</h2>
+        <h2 className='text-lg font-light text-white-600'>Discover new blogs on technology, trends, and innovation</h2>
       </div>
 
       {/* Hero Section */}
@@ -22,7 +22,7 @@ const Header = () => {
 
         <div className='w-full md:w-1/2'>
           <h1 className='text-3xl font-bold'>Welcome to BytePost</h1>
-          <p className='mt-2 mb-8 text-gray-700'>
+          <p className='mt-2 mb-8 text-white-700'>
             Explore the latest posts on software development, tech innovations, and digital trends. Whether you're a beginner or a tech-savvy pro, our curated blogs bring you stories worth reading and insights worth sharing.
           </p>
           <Link
