@@ -20,50 +20,41 @@ import EditBlogs from './components/Admin Components/Edit Blogs/EditBlogs.jsx';
 import UpdateBlog from './components/Admin Components/Edit Blogs/Compo/UpdateBlog.jsx';
 import { BlogProvider } from './Context/BlogContext.jsx';
 
-
-
-
-
-
-
-
-
-
 const App = () => {
   return (
     <BlogProvider>
       <Router>
         <Routes>
           {/* Main site routes */}
-          <Route path='/' element={<MainLayout />}>
+          <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
-            <Route path='all-blogs' element={<AllBlogs />} />
-            <Route path='description/:id' element={<Description />} />
-            <Route path='cat/:id' element={<Categories />} />
+            <Route path="all-blogs" element={<AllBlogs />} />
+            <Route path="description/:id" element={<Description />} />
+            <Route path="cat/:id" element={<Categories />} />
 
             {/* Profile nested routes */}
-            <Route path='profile' element={<Profile />}>
+            <Route path="profile" element={<Profile />}>
               <Route index element={<DashboardProfile />} />
-              <Route path='favorites' element={<Favorites />} />
-              <Route path='liked-blogs' element={<LikedBlogs />} />
+              <Route path="favorites" element={<Favorites />} />
+              <Route path="liked-blogs" element={<LikedBlogs />} />
             </Route>
           </Route>
 
           {/* Auth & Admin routes */}
           <Route element={<OtherLayout />}>
-            <Route path='login' element={<Login />} />
-            <Route path='signup' element={<Signup />} />
-            <Route path='admin-login' element={<AdminLogin />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="admin-login" element={<AdminLogin />} />
 
             {/* Admin Dashboard nested routes */}
-            <Route path='admin-dashboard' element={<AdminDashboard />}>
+            <Route path="admin-dashboard" element={<AdminDashboard />}>
               <Route index element={<DashBoard />} />
-              <Route path='add-blogs' element={<AddBlogs />} />
-              <Route path='edit-blogs' element={<EditBlogs />} />
-              <Route path='update-blog/:id' element={<UpdateBlog />} />
-
-              
-               
+              <Route path="add-blogs" element={<AddBlogs />} />
+              <Route path="edit-blogs" element={<EditBlogs />} />
+              <Route path="update-blog/:id" element={<UpdateBlog />} />
+              <Route path="settings" element={<div>Settings Component</div>} />
+              <Route path="manage-users" element={<div>Manage Users Component</div>} />
+              <Route path="reports" element={<div>Reports Component</div>} />
             </Route>
           </Route>
         </Routes>

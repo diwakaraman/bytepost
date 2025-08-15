@@ -1,44 +1,52 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+// src/components/Sidebar/Sidebar.jsx
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
 
-  const links = [
-    { to: "/admin-dashboard", name: "Dashboard" },
-    { to: "/admin-dashboard/add-blogs", name: "Add Blogs" },
-    { to: "/admin-dashboard/edit-blogs", name: "Edit Blogs" },
+  const navLinks = [
+    { to: "/admin-dashboard", label: "Dashboard" },
+    { to: "/admin-dashboard/add-blogs", label: "Add Blogs" },
+    { to: "/admin-dashboard/edit-blogs", label: "Edit Blogs" },
+    { to: "/admin-dashboard/manage-users", label: "Manage Users" },
+    { to: "/admin-dashboard/reports", label: "Reports" },
+    { to: "/admin-dashboard/settings", label: "Settings" },
   ];
 
   const handleLogout = () => {
-    localStorage.removeItem('token'); // clear auth token
-    navigate('/login'); // redirect to login
+    localStorage.removeItem("token");
+    navigate("/login");
   };
 
   return (
-    <div className='p-4'>
-      <h1 className='text-2xl font-semibold'>Admin Page</h1>
-      <hr className='my-4' />
-      <div className='flex flex-col gap-4'>
-        {links.map((items, i) => (
-          <Link
-            to={items.to}
-            key={i}
-            className='text-xl hover:scale-105 transition-all duration-300'
-          >
-            {items.name}
-          </Link>
-        ))}
+    <aside className="w-64 bg-white h-screen shadow-md p-4 flex flex-col justify-between">
+      {/* Top Section */}
+      <div>
+        <h2 className="text-xl font-bold mb-6 text-gray-700">Admin Panel</h2>
+        <nav className="space-y-2">
+          {navLinks.map((link, index) => (
+            <Link
+              key={index}
+              to={link.to}
+              className="block px-3 py-2 rounded-md text-gray-600 hover:bg-gray-200 hover:text-gray-900 transition-all duration-200"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
       </div>
+
+      {/* Bottom Section */}
       <div>
         <button
           onClick={handleLogout}
-          className='mt-5 bg-black text-white px-4 py-2 w-[100%] hover:bg-zinc-700 rounded'
+          className="w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 transition-all duration-200"
         >
-          LogOut
+          Log Out
         </button>
       </div>
-    </div>
+    </aside>
   );
 };
 
