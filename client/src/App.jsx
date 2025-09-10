@@ -19,6 +19,10 @@ import AddBlogs from './components/Admin Components/Add Blogs/AddBlogs.jsx';
 import EditBlogs from './components/Admin Components/Edit Blogs/EditBlogs.jsx';
 import UpdateBlog from './components/Admin Components/Edit Blogs/Compo/UpdateBlog.jsx';
 import { BlogProvider } from './Context/BlogContext.jsx';
+import Settings from './components/Admin Components/Setting/Settings.jsx';
+import ReportForm from './components/Admin Components/Report/ReportForm.jsx';
+import Users from './components/Admin Components/ManageUsers/Users.jsx';
+
 
 const App = () => {
   return (
@@ -52,9 +56,11 @@ const App = () => {
               <Route path="add-blogs" element={<AddBlogs />} />
               <Route path="edit-blogs" element={<EditBlogs />} />
               <Route path="update-blog/:id" element={<UpdateBlog />} />
-              <Route path="settings" element={<div>Settings Component</div>} />
-              <Route path="manage-users" element={<div>Manage Users Component</div>} />
-              <Route path="reports" element={<div>Reports Component</div>} />
+              <Route path="settings" element={<Settings/>} />
+              <Route path="manage-users" element={<Users/>} />
+              <Route path="reports" element={<ReportForm/>} />
+
+
             </Route>
           </Route>
         </Routes>

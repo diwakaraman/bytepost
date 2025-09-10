@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Settings = () => {
+  console.log("Settings component loaded");
   const [userData, setUserData] = useState({
     name: "",
     email: "",

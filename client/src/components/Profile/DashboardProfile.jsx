@@ -23,7 +23,7 @@ const DashboardProfile = () => {
          </div>
         </div>
         <div>
-          <p className='text-zinc-700'>iamankumardiwakar@gmail.com</p>
+          <p className='text-white-700'>iamankumardiwakar@gmail.com</p>
           <h1 className='text-5xl mt-2 font-semibold'>Aman Diwakar</h1>
           </div>
         </div>
@@ -32,7 +32,7 @@ const DashboardProfile = () => {
         <h1 className='text-2xl font-semibold'>Change account's password</h1>
         <form action='' className='my-4 flex flex-col gap-4'>
       <div className='flex flex-col '>
-      <label htmlFor='name' className='text-zinc-700'>Current Password
+      <label htmlFor='name' className='text-white-700'>Current Password
        
         </label>
         <input
@@ -43,7 +43,7 @@ const DashboardProfile = () => {
             />
       </div>
       <div className='flex flex-col mt-4'>
-      <label htmlFor='name' className='text-zinc-700'>New Password
+      <label htmlFor='name' className='text-white-700'>New Password
        
         </label>
         <input
@@ -54,7 +54,7 @@ const DashboardProfile = () => {
             />
       </div>
       <div className='flex flex-col mt-4'>
-      <label htmlFor='name' className='text-zinc-700'>Confirm New Password
+      <label htmlFor='name' className='text-white-700'>Confirm New Password
        
         </label>
         <input
