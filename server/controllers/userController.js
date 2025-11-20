@@ -1,7 +1,6 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
 
-// signup controller
 const signupUser = async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -15,13 +14,8 @@ const signupUser = async (req, res) => {
 
     console.log("username: " + username);
 
-    // // Check if username or email already exists
-    // const existingUser = await User.findOne({ $or: [{ username }, { email }] });
-    console.log("i ana here");
     
-    // if (existingUser) {
-    //   return res.status(400).json({ success: false, error: "User already exists" });
-    // }
+    console.log("i ana here");
 
     console.log("Before bcrypt");
     const hashedPass = await bcrypt.hash(password, 10);
@@ -49,8 +43,6 @@ const signupUser = async (req, res) => {
   }
 };
 
-
-// 
 const getUsers = async (req, res) => {
   try {
     const users = await User.find({});
@@ -60,7 +52,7 @@ const getUsers = async (req, res) => {
   }
 };
 
-// export controllers
+
 module.exports = {
   signupUser,
   getUsers,
