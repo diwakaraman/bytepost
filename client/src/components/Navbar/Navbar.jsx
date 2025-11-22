@@ -16,13 +16,13 @@ const Navbar = () => {
   return (
     <nav className="relative flex items-center justify-between py-4 px-6 border-b border-zinc-300 bg-white shadow">
       
-      {/* Brand Logo */}
+     
       <div className="text-2xl font-extrabold bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-transparent bg-clip-text tracking-wider">
         <Link to="/">BytePost</Link>
       </div>
 
-      {/* Navigation Links */}
-      <div className="w-4/6 flex items-center justify-end gap-2"> {/* Reduced spacing */}
+      
+      <div className="w-4/6 flex items-center justify-end gap-2"> 
         {links.map((item, i) => (
           <Link
             key={i}
@@ -40,7 +40,7 @@ const Navbar = () => {
           Signup
         </Link>
 
-        {/* 3-dot menu always visible */}
+        
         <div className="flex items-center justify-end">
           <button
             className="text-3xl text-gray-800 ml-2"
@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Overlay */}
+     
       <div
         className={`fixed top-0 left-0 nav-bg h-screen w-full bg-white/90 backdrop-blur-md p-8 z-40 ${
           MobileNav ? "translate-y-0 flex flex-col" : "translate-y-[-100%]"

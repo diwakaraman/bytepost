@@ -14,11 +14,11 @@ const Settings = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  // Fetch current user details
+  
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("/api/users/me"); // Your API endpoint
+        const res = await fetch("/api/users/me"); 
         const data = await res.json();
         setUserData({
           name: data.name || "",
@@ -32,7 +32,6 @@ const Settings = () => {
     fetchUser();
   }, []);
 
-  // Update profile handler
   const handleProfileUpdate = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -52,7 +51,7 @@ const Settings = () => {
     }
   };
 
-  // Change password handler
+  
   const handleChangePassword = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -80,7 +79,7 @@ const Settings = () => {
         <p className="mb-4 text-center text-sm text-blue-600">{message}</p>
       )}
 
-      {/* Profile Update */}
+      
       <form onSubmit={handleProfileUpdate} className="space-y-4 mb-8">
         <div>
           <label className="block text-sm font-medium">Name</label>
@@ -125,7 +124,7 @@ const Settings = () => {
         </button>
       </form>
 
-      {/* Change Password */}
+     
       <form onSubmit={handleChangePassword} className="space-y-4">
         <h2 className="text-xl font-semibold">Change Password</h2>
         <div>

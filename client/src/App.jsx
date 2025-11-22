@@ -29,14 +29,14 @@ const App = () => {
     <BlogProvider>
       <Router>
         <Routes>
-          {/* Main site routes */}
+        
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path="all-blogs" element={<AllBlogs />} />
             <Route path="description/:id" element={<Description />} />
             <Route path="cat/:id" element={<Categories />} />
 
-            {/* Profile nested routes */}
+         
             <Route path="profile" element={<Profile />}>
               <Route index element={<DashboardProfile />} />
               <Route path="favorites" element={<Favorites />} />
@@ -44,13 +44,13 @@ const App = () => {
             </Route>
           </Route>
 
-          {/* Auth & Admin routes */}
+    
           <Route element={<OtherLayout />}>
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
             <Route path="admin-login" element={<AdminLogin />} />
 
-            {/* Admin Dashboard nested routes */}
+           
             <Route path="admin-dashboard" element={<AdminDashboard />}>
               <Route index element={<DashBoard />} />
               <Route path="add-blogs" element={<AddBlogs />} />

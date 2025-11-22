@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import AllBlogs from "../../../pages/All Blogs/page";
 
-// Reusable card with link
+
 const AdminCard = ({ title, description, path, color, icon }) => {
   return (
     <Link
@@ -21,28 +21,28 @@ const DashBoard = () => {
     {
       title: "All Blogs",
       description: "View, edit, and delete all blogs.",
-      path: "/admin-dashboard/edit-blogs", // now links to your EditBlogs.jsx
+      path: "/admin-dashboard/edit-blogs",
       color: "bg-purple-600",
       icon: "📝",
     },
     {
       title: "Manage Users",
       description: "Control user accounts and permissions.",
-      path: "/admin-dashboard/users", // matches your ManageUsers.jsx route
+      path: "/admin-dashboard/users", 
       color: "bg-blue-600",
       icon: "👥",
     },
     {
       title: "Reports",
       description: "Check flagged blogs and take actions.",
-      path: "/admin-dashboard/reports", // matches your Reports.jsx route
+      path: "/admin-dashboard/reports", 
       color: "bg-red-500",
       icon: "🚨",
     },
     {
       title: "Settings",
       description: "Change admin settings and preferences.",
-      path: "/admin-dashboard/settings", // matches your Settings.jsx route
+      path: "/admin-dashboard/settings", 
       color: "bg-green-600",
       icon: "⚙",
     },
@@ -50,18 +50,18 @@ const DashBoard = () => {
 
   return (
     <div className="p-6 space-y-8">
-      {/* Dashboard Header */}
+      
       <h1 className="text-3xl font-bold">Admin Dashboard</h1>
       <p className="text-gray-600">Welcome back, Admin! Manage your blog platform here.</p>
 
-      {/* Quick Links */}
+     
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {adminLinks.map((link, index) => (
           <AdminCard key={index} {...link} />
         ))}
       </div>
 
-      {/* Example: Show All Blogs directly in dashboard */}
+     
       <div className="bg-white rounded-xl shadow-md p-4">
         <h2 className="text-lg font-bold mb-4">Recent Blogs</h2>
         <AllBlogs />

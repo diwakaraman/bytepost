@@ -1,6 +1,6 @@
 import React from 'react'
 
-// ✅ Blog Card Component
+
 const BlogCard = ({ items }) => {
   return (
     <div className="flex flex-col md:flex-row gap-4 border p-4 rounded shadow-sm hover:shadow-md transition">
@@ -18,7 +18,7 @@ const BlogCard = ({ items }) => {
 }
 
 const Description = () => {
-  // ✅ Example blog data with real image URLs
+  
   const data = [
     {
       img:"https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80  ",
@@ -54,7 +54,7 @@ const Description = () => {
 
   return (
     <div className="mb-6 py-4">
-      {/* ✅ Main Blog Description */}
+      
       <h1 className="text-2xl font-bold mb-4">System Design Fundamentals</h1>
       <img
         src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
@@ -68,7 +68,6 @@ const Description = () => {
         fault tolerance, caching, and database design.
       </p>
 
-      {/* ✅ All Blogs Section */}
       <h1 className="text-xl font-semibold mb-4">Related Blogs</h1>
       <div className="flex flex-col gap-6">
         {data.map((items, i) => (

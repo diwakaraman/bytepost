@@ -22,8 +22,7 @@ const LikedBlogs = () => {
 data.map((items,i) => (
 <div key={i} className='flex flex-col lg:flex-row gap-2 lg:gap-4'>
 
- {/* <h3>{items.title}</h3>
- <p>{items.description}</p> */}
+
 
  <BlogCard items={items}/>
 </div>

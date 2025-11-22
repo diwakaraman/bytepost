@@ -20,10 +20,10 @@ const SideBar = () => {
   ];
 
   const handleLogout = () => {
-    // Optional: Clear any stored auth tokens
+    
     localStorage.removeItem('authToken');
 
-    // Redirect to login page
+    
     navigate('/login');
   };
 

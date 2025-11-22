@@ -5,13 +5,13 @@ const Users = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch users from backend (adjust API route)
+    
     const fetchUsers = async () => {
       try {
         const res = await fetch("/api/users");
         const data = await res.json();
 cd
-        // Filter to only show non-admin users
+        
         const normalUsers = data.filter(user => user.role !== "admin");
         setUsers(normalUsers);
       } catch (err) {

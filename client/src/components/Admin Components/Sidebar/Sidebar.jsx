@@ -1,4 +1,4 @@
-// src/components/Sidebar/Sidebar.jsx
+
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   return (
     <aside className="w-64 bg-white h-screen shadow-md p-4 flex flex-col justify-between">
-      {/* Top Section */}
+      
       <div>
         <h2 className="text-xl font-bold mb-6 text-gray-700">Admin Panel</h2>
         <nav className="space-y-2">
@@ -37,7 +37,7 @@ const Sidebar = () => {
         </nav>
       </div>
 
-      {/* Bottom Section */}
+      
       <div>
         <button
           onClick={handleLogout}

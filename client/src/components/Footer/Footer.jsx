@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="w-full bg-black text-zinc-200 py-8">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        {/* About Section */}
+        
         <div>
           <h2 className="text-lg md:text-xl font-bold mb-3 text-yellow-400">
             The BytePost
@@ -18,7 +18,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
+        
         <div>
           <h2 className="text-lg md:text-xl font-bold mb-3 text-yellow-400">
             Quick Links
@@ -31,7 +31,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info */}
         <div>
           <h2 className="text-lg md:text-xl font-bold mb-3 text-yellow-400">
             Connect With Us
@@ -54,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Note */}
+      
       <div className="mt-8 border-t border-zinc-700 pt-4 text-center text-sm text-zinc-400">
         © {new Date().getFullYear()} Made with ❤️ by Aman | The BytePost. All
         rights reserved.

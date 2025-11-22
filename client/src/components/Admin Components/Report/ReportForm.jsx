@@ -10,7 +10,6 @@ const ReportForm = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  // Handle input changes
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -18,7 +17,7 @@ const ReportForm = () => {
     });
   };
 
-  // Submit form
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -78,7 +77,7 @@ const ReportForm = () => {
           />
         </div>
 
-        {/* Reason */}
+       
         <div>
           <label className="block text-sm font-medium mb-1">Reason</label>
           <textarea
@@ -92,7 +91,7 @@ const ReportForm = () => {
           ></textarea>
         </div>
 
-        {/* Status */}
+        
         <div>
           <label className="block text-sm font-medium mb-1">Status</label>
           <select
