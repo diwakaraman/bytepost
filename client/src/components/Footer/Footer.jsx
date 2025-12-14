@@ -28,6 +28,7 @@ const Footer = () => {
             <li><a href="/all-blogs" className="hover:text-yellow-400 transition">All Blogs</a></li>
             <li><a href="/profile" className="hover:text-yellow-400 transition">Profile</a></li>
             <li><a href="/contact" className="hover:text-yellow-400 transition">Contact</a></li>
+            <li><a href="/about" className="hover:text-yellow-400 transition">About</a></li>
           </ul>
         </div>
 
@@ -40,13 +41,13 @@ const Footer = () => {
           </p>
           <p className="text-sm mt-2">Follow us on:</p>
           <div className="flex gap-4 mt-3 text-xl">
-            <a href="#" className="hover:text-yellow-400 transition">
+            <a href="https://www.instagram.com/mr_aman5588/" className="hover:text-yellow-400 transition">
               <FaInstagram />
             </a>
             <a href="#" className="hover:text-yellow-400 transition">
               <FaTwitter />
             </a>
-            <a href="#" className="hover:text-yellow-400 transition">
+            <a href="https://www.linkedin.com/in/aman-diwakar-48527a28b/" className="hover:text-yellow-400 transition">
               <FaLinkedin />
             </a>
           </div>
