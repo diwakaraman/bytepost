@@ -11,7 +11,7 @@ const BlogCard = ({ items }) => {
       />
       <div>
         <h2 className="text-lg font-semibold">{items.title}</h2>
-        <p className="text-gray-600">{items.description}</p>
+        <p className="text-gray-100">{items.description}</p>
       </div>
     </div>
   )
