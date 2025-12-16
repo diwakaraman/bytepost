@@ -5,7 +5,6 @@ const Header = () => {
   return (
     <section className=" flex flex-col gap-8">
 
-      
       <div className="flex flex-col gap-2">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
           Build, Read & Share on Your
@@ -99,3 +98,5 @@ const Header = () => {
 };
 
 export default Header;
+
+
